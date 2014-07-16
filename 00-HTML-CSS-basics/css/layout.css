@@ -1,0 +1,104 @@
+html {
+	font-size: 14px;
+	font-family: Georgia;
+}
+
+body {
+	background: white;
+}
+
+header, footer {
+	width: 100%;
+	text-align: left;
+}
+h1 {
+	width: 33%;
+	float: left;
+	padding-left: 10px;
+}
+section {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	text-align: center;
+}
+article {
+	display: inline;
+}
+article img {
+	padding: 1%;
+}
+
+.description {
+	width: 66%;
+	float: left;
+}
+
+.columna {
+	position: absolute;
+	width: 1px;
+	background-color: rgba(0, 0, 0, 0.075);
+	height: 100%;
+	top: 0px;
+}
+
+.columna-01 {
+	left: 16.66667%;
+}
+
+.columna-02 {
+	left: 33.33334%;
+}
+
+.columna-03 {
+	left: 50%;
+}
+
+.columna-04 {
+	left: 66.66667%;
+}
+
+.columna-05 {
+	left: 83.33334%;
+}
+
+.box-black-prev, .box-black-next {
+	line-height: 10rem;
+	color: #fff;
+	padding: 1%;;
+	background-color: #000;
+	position: fixed;
+	top: 50%;
+	text-align: center;
+	border: 1px solid #222;
+	font-size: 24px;	
+}
+.box-black-prev {
+	left: 0;
+}
+.box-black-next {
+	right: 0;
+}
+
+.box-black-prev:hover, .box-black-next:hover {
+	width: 10%;
+}
+
+.box-black-prev:hover #arrow-prev {
+	display: none;
+}
+.box-black-next:hover #arrow-next {
+	display: none;
+}
+.box-black-prev:hover #prev{
+	display: inline-block;
+}
+ 
+.box-black-next:hover #next{
+	display: inline-block;
+}
+#prev, #next {
+	display: none;
+	line-height: inherit;
+	font-size: 14px;
+}
