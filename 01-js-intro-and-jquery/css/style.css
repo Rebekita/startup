@@ -1,0 +1,56 @@
+html {
+	font-size: 14px;
+	font-family: Georgia;
+}
+
+header, footer {
+	width: 100%;
+	text-align: center;	
+}
+section {
+	width: 51%;
+}
+nav, aside{
+	width: 24%;
+}
+section, nav, aside{
+	display:inline-block;
+	vertical-align: top;
+	margin-top:10px;
+	
+}
+aside {
+	opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+aside:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+
+#fadein{
+	display:none;
+}
+
+#prueba{
+	margin:auto;
+	text-align: center;
+}
+.alias{
+	width: 500px;
+	height: 60px;
+}
+.flotar{
+	float:left;
+}
+.fecha{
+	font-size: 10px;
+}
+.espacio{
+	padding-left: 2%;	
+}
+.texto{
+	display: inline-block;
+}
