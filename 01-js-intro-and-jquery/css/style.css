@@ -5,52 +5,75 @@ html {
 
 header, footer {
 	width: 100%;
-	text-align: center;	
+	text-align: center;
 }
 section {
 	width: 51%;
 }
-nav, aside{
+nav, aside {
 	width: 24%;
 }
-section, nav, aside{
-	display:inline-block;
+section, nav, aside {
+	display: inline-block;
 	vertical-align: top;
-	margin-top:10px;
-	
+	margin-top: 10px;
 }
 aside {
 	opacity: 0.4;
-    filter: alpha(opacity=40); /* For IE8 and earlier */
 }
 
 aside:hover {
-    opacity: 1.0;
-    filter: alpha(opacity=100); /* For IE8 and earlier */
+	opacity: 1.0;
 }
 
-
-#fadein{
-	display:none;
+#fadein {
+	display: none;
 }
 
-#prueba{
-	margin:auto;
+#prueba {
+	margin: auto;
 	text-align: center;
 }
-.alias{
+.alias {
 	width: 500px;
 	height: 60px;
 }
-.flotar{
-	float:left;
+.flotar {
+	float: left;
 }
-.fecha{
+.fecha {
 	font-size: 10px;
 }
-.espacio{
-	padding-left: 2%;	
+.espacio {
+	padding-left: 2%;
 }
-.texto{
+.texto {
 	display: inline-block;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1280px) {
+	section {
+		width: 51%;
+	}
+	nav {
+		width: 14%;
+	}
+	aside {
+		width: 34%;
+	}
+	.alias {
+		width: 350px;
+		height: 60px;
+	}
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+
+	aside {
+		width: 100%;
+	}
+
+	.alias {
+		width: 200px;
+		height: 60px;
+	}
 }
