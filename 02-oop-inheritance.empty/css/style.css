@@ -1,0 +1,79 @@
+html {
+	font-size: 14px;
+	font-family: Georgia;
+}
+
+header, footer {
+	width: 100%;
+	text-align: center;
+}
+section {
+	width: 51%;
+}
+nav, aside {
+	width: 24%;
+}
+section, nav, aside {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 10px;
+}
+aside {
+	opacity: 0.4;
+}
+
+aside:hover {
+	opacity: 1.0;
+}
+
+#fadein {
+	display: none;
+}
+
+#prueba {
+	margin: auto;
+	text-align: center;
+}
+.alias {
+	width: 500px;
+	height: 60px;
+}
+.flotar {
+	float: left;
+}
+.fecha {
+	font-size: 10px;
+}
+.espacio {
+	padding-left: 2%;
+}
+.texto {
+	display: inline-block;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1280px) {
+	section {
+		width: 51%;
+	}
+	nav {
+		width: 14%;
+	}
+	aside {
+		width: 34%;
+	}
+	.alias {
+		width: 350px;
+		height: 60px;
+	}
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+
+	aside {
+		width: 100%;
+	}
+
+	.alias {
+		width: 200px;
+		height: 60px;
+	}
+}
