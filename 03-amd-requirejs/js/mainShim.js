@@ -1,4 +1,4 @@
-require.config({
+require.config({	
     paths: {
     	movieNew : "movieNew",
 		directorNew : "directorNew",

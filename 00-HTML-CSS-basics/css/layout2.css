@@ -113,14 +113,14 @@ article img {
 }
 
 /*desktop*/
-@media screen and (min-width: 960px) {
+@media only screen and (min-width: 960px) {
 
 	article img {
 		width: 30%;
 		height: 30%;
 	}
 }
-@media screen and (max-width: 860px) {
+@media only screen and (max-width: 860px) {
 	body {
 		font-size: 12px;
 	}
@@ -142,7 +142,7 @@ article img {
 	}
 }
 
-@media screen and (max-width: 640px) {
+@media only screen and (max-width: 640px) {
 	body {
 		font-size: 12px;
 	}
@@ -165,7 +165,7 @@ article img {
 
 }
 
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
 	body {
 		font-size: 10px;
 	}
