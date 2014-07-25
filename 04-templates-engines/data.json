@@ -1,0 +1,52 @@
+{  
+   "firstname":"Carla Rebeca Patricia",
+   "familyname":"de San Martin Oliva",
+   "linkedin_id":"71519603",
+   "github_id":"Rebekita",
+   "bio_data":{  
+      "email":"r.desanmartin@globant.com",
+      "stars":[  
+         "PHP",
+         "Git"
+      ],
+      "skills":{  
+         "details":[  
+            {  
+               "type":"Programming Languages",
+               "items":[  
+                  "Java",
+                  "PHP",
+                  "Android"
+               ]
+            },
+            {  
+               "type":"Web Frameworks",
+               "items":[  
+                  "Symfony 2"
+               ]
+            },
+            {  
+               "type":"Databases",
+               "items":[  
+                  "MySQL",
+                  "SQL SERVER"
+               ]
+            }
+         ]
+      },
+      "education":{
+         "schools":[  
+            {  
+               "degree":"Programador Universitario",
+               "institution":"Universidad Nacional de San Juan",
+               "graduation_year":2005
+            },
+            {  
+               "degree":"Técnico en Administración de Empresas",
+               "institution":"Escuela Provincial de Educación Técnica Nº 4",
+               "graduation_year":1996
+            }
+         ]
+      }
+   }
+}

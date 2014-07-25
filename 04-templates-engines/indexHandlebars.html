@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Topic 4</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="libs/handlebars-v1.3.0.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	</head>
+	<body>
+		<!--[if lt IE 8]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<!-- Add your site or application content here -->
+		<header>
+			<div class="entry"></div>			
+			</header>
+			<nav>
+			</nav>
+			<section>			
+			</section>
+			<aside>
+			</aside>
+			<footer>
+			</footer>
+		<script id="entry-template" type="text/x-handlebars-template">
+			<h1>{{firstname}} {{familyname}}</h1>
+			<ul>
+				<li>Usuario GitHub: <strong>{{github_id}}</strong></li>
+				<li>Usuario Linkedin: <strong>{{linkedin_id}}</strong></li>
+			</ul>
+			<div class="bio">
+				<h2>Biografía</h2>
+				<ul>
+				<li>E-Mail: <strong>{{bio_data.email}}</strong></li>
+				<li>Star:</li>
+				<ul>
+					{{#each bio_data.stars}}
+					<li>{{this}}</li>
+					{{/each}}
+				</ul>
+				{{#each bio_data.skills.details}}
+					<h3>{{type}}</h3>
+					<ul>
+						{{#each items}}
+						<li>{{this}}</li>
+						{{/each}}
+					</ul>	
+				{{/each}}
+			</ul>
+			</div>
+			<div class="education">
+				<h2>Educación</h2>				
+				{{#each bio_data.education.schools}}					
+					<ul>					
+						<li>Titulo: <strong>{{degree}}</strong></li>
+						<li>Institución: <strong>{{institution}}</strong></li>
+						<li>Año: <strong>{{graduation_year}}</strong></li>
+						<li>---------------------------------------------</li>
+					</ul>	
+				{{/each}}			
+			</div>
+		</script>
+		<script type="text/javascript">
+			$.ajax({
+				url : "data.json",
+				dataType : "json",
+				success : function(data) {
+					console.log(data);					
+					var source = $("#entry-template").html();
+					var template = Handlebars.compile(source);
+					$("body").html(template(data));
+				},
+				error : function() {
+					console.log("Hubo un problema");
+
+				}
+			});
+
+		</script>
+
+	</body>
+</html>

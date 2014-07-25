@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Topic 4</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="libs/dust-full.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	</head>
+	<body>
+		<!--[if lt IE 8]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<!-- Add your site or application content here -->
+		<header>
+			<div class="entry"></div>
+		</header>
+		<nav></nav>
+		<section></section>
+		<aside></aside>
+		<footer></footer>
+		<script id="entry-template" type="text/template">
+			<h1>{firstname}</h1>
+
+
+	<h1>{firstname} {familyname}</h1>
+			<ul>
+				<li>Usuario GitHub: <strong>{github_id}</strong></li>
+				<li>Usuario Linkedin: <strong>{linkedin_id}</strong></li>
+			</ul>
+			<div class="bio">
+				<h2>Biografía</h2>
+				<ul>
+				<li>E-Mail: <strong>{bio_data.email}</strong></li>
+				<li>Star:</li>
+				<ul>
+					{#bio_data.stars}
+					<li>{.}</li>
+					{/bio_data.stars}
+				</ul>
+				{#bio_data.skills.details}
+					<h3>{type}</h3>
+					<ul>
+						{#items}
+						<li>{.}</li>
+						{/items}
+					</ul>	
+				{/bio_data.skills.details}
+			</ul>
+			</div>
+			<div class="education">
+				<h2>Educación</h2>				
+				{#bio_data.education.schools}					
+					<ul>					
+						<li>Titulo: <strong>{degree}</strong></li>
+						<li>Institución: <strong>{institution}</strong></li>
+						<li>Año: <strong>{graduation_year}</strong></li>
+						<li>---------------------------------------------</li>
+					</ul>	
+				{/bio_data.education.schools}			
+			</div>
+		</script>
+		<script type="text/javascript">
+			$.ajax({
+				url : "data.json",
+				dataType : 'json',
+				success : function(data) {
+					var source = $('#entry-template').html();
+					var compiled = dust.compile(source, "tmpl");
+					dust.loadSource(compiled);
+					dust.render("tmpl", data, function(err, out) {
+						$('body').html(out);
+					});
+				},
+				error : function() {
+					console.log("Hubo un problema");
+				}
+			});
+		</script>
+
+	</body>
+</html>

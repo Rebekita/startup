@@ -1,0 +1,46 @@
+body {
+	margin-left: 10px;
+	font-size: 14px;
+}
+h1 {
+	font-size: 20px;
+}
+
+h2 {
+	font-size: 18px;
+}
+h3 {
+	font-size: 16px;
+	padding-left: 10px;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 20px;
+}
+li {
+	padding-bottom: 10px;
+}
+p {
+	margin-left: 10px;
+}
+
+@media only screen and (max-device-width: 588px)and (-webkit-min-device-pixel-ratio : 2) {
+	
+	body {
+		font-size: 12px;
+		
+	}
+	h1 {
+		font-size: 18px;
+	}
+
+	h2 {
+		font-size: 14px;
+	}
+	h3 {
+		font-size: 14px;
+		padding-left: 10px;
+	}
+
+}
