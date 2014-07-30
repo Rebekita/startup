@@ -66,23 +66,7 @@
 				{{/each}}			
 			</div>
 		</script>
-		<script type="text/javascript">
-			$.ajax({
-				url : "data.json",
-				dataType : "json",
-				success : function(data) {
-					console.log(data);					
-					var source = $("#entry-template").html();
-					var template = Handlebars.compile(source);
-					$("body").html(template(data));
-				},
-				error : function() {
-					console.log("Hubo un problema");
-
-				}
-			});
-
-		</script>
-
+		
+		<script src="js/jsHandlebars.js"></script>
 	</body>
 </html>

@@ -7,7 +7,7 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">		
+		<link rel="stylesheet" href="css/style.css">
 		<script src="libs/underscore-min.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
@@ -17,69 +17,51 @@
 		<![endif]-->
 		<!-- Add your site or application content here -->
 		<header>
-			<div class="entry"></div>			
-			</header>
-			<nav>
-			</nav>
-			<section>			
-			</section>
-			<aside>
-			</aside>
-			<footer>
-			</footer>
-		<script id="entry-template" type="text/template"> 
-		<h1><%- firstname %> <%- familyname%></h1>
+			<div class="entry"></div>
+		</header>
+		<nav></nav>
+		<section></section>
+		<aside></aside>
+		<footer></footer>
+		<script id="entry-template" type="text/template">
+			<h1><%- firstname %> <%- familyname%></h1>
 			<ul>
-				<li>Usuario GitHub: <strong><%- github_id %></strong></li>
-				<li>Usuario Linkedin: <strong><%- linkedin_id %></strong></li>
+			<li>Usuario GitHub: <strong><%- github_id %></strong></li>
+			<li>Usuario Linkedin: <strong><%- linkedin_id %></strong></li>
 			</ul>
 			<div class="bio">
-				<h2>Biografía</h2>
-				<ul>
-				<li>E-Mail: <strong><%- bio_data.email %></strong></li>
-				<li>Star:</li>
-				<ul>
-					<% _.each(bio_data.stars, function(item){ %>
-					<li><%- item %></li>
-					<% }); %>
-				</ul>
-				<% _.each(bio_data.skills.details, function(item){ %>
-				
-					<h3><%- item.type %></h3>
-					<ul>
-						<% _.each(item, function(ite){ %>						
-						<li><%- ite %></li>
-						<% }); %>
-					</ul>	
-				<% }); %>
+			<h2>Biografía</h2>
+			<ul>
+			<li>E-Mail: <strong><%- bio_data.email %></strong></li>
+			<li>Star:</li>
+			<ul>
+			<% _.each(bio_data.stars, function(item){ %>
+			<li><%- item %></li>
+			<% }); %>
+			</ul>
+			<% _.each(bio_data.skills.details, function(item){ %>
+
+			<h3><%- item.type %></h3>
+			<ul>
+			<% _.each(item, function(ite){ %>
+			<li><%- ite %></li>
+			<% }); %>
+			</ul>
+			<% }); %>
 			</ul>
 			</div>
 			<div class="education">
-				<h2>Educación</h2>		
-				<% _.each(bio_data.education.schools, function(item){ %>					
-					<ul>					
-						<li>Titulo: <strong><%- item.degree %></strong></li>
-						<li>Institución: <strong><%- item.institution %></strong></li>
-						<li>Año: <strong><%- item.graduation_year %></strong></li>
-						<li>---------------------------------------------</li>
-					</ul>	
-				<% }); %>			
-			</div>					
+			<h2>Educación</h2>
+			<% _.each(bio_data.education.schools, function(item){ %>
+			<ul>
+			<li>Titulo: <strong><%- item.degree %></strong></li>
+			<li>Institución: <strong><%- item.institution %></strong></li>
+			<li>Año: <strong><%- item.graduation_year %></strong></li>
+			<li>---------------------------------------------</li>
+			</ul>
+			<% }); %>
+			</div>
 		</script>
-		<script type="text/javascript">
-			$.ajax({
-				url : "data.json",
-				dataType : "json",
-				success : function(data) {						
-					var source = _.template($("#entry-template").html());					
-  					$('body').html(source(data));  					
-				},
-				error : function() {
-					console.log("Hubo un problema");
-				}
-			});
-
-		</script>
-
+		<script src="js/jsUnderscore.js"></script>
 	</body>
 </html>
