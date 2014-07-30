@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Backbone.js Todos</title>
+  <link rel="stylesheet" href="css/movie.css"/> 
+</head>
+	<body>
+	  <div id="movieapp">
+			<header>
+				<h1>Películas</h1>
+				<input id="titulo" type="text" placeholder="Titulo de pelicula" class="nuevo">
+				<input id="anio" type="text" placeholder="Año" class="nuevo">
+				<input id="categoria" type="text" placeholder="Categoria" class="nuevo">
+				<input id="director" type="text" placeholder="Director" class="nuevo">
+			</header>
+			<section id="main">
+				<input id="marcarTodos" type="checkbox">
+				<label>Marcar Todas</label>
+				<ul id="lista-movies"></ul>
+			</section>
+			<footer>
+				<a id="limpiar-todas">Borrar todos</a>
+				<div id="contador"></div>
+			</footer>
+		</div>
+
+		<!-- Template -->
+		<script type="text/template" id="movie-template">
+			<div class="view">
+			<input class="toggle" type="checkbox" <%= cantidad ? 'checked="checked"' : '' %> />
+			<label><%- titulo %></label>
+			<a class="detalles" href="#/detalles/">Detalles</a>
+			<a class="eliminar"></a>
+			</div>
+			<input class="editar" id="titulo" type="text" value="<%- titulo %>" />
+			<input class="editar" id="anio" type="text" value="<%- anio %>" />
+			<input class="editar" id="categoria" type="text" value="<%- categoria %>" />
+			<input class="editar" id="director" type="text" value="<%- director %>" />
+		</script>
+
+		<!-- Template -->
+		<script type="text/template" id="opciones-template">
+			<% if (cantidad) { %>
+			<a id="limpiar-todas">Borrar <%= cantidad %> elementos</a>
+			<% } %>
+			<div class="contador"><b><%= contador %></b> elementos</div>
+		</script>
+
+		<!-- Library -->
+		<script src="js/lib/jquery.js"></script>
+		<script src="js/lib/underscore.js"></script>
+		<script src="js/lib/backbone.js"></script>
+		<script src="js/lib/backbone.localStorage.js"></script>
+
+		<!-- Implementation -->
+		<script src="js/model/movie.js"></script>
+		<script src="js/collection/movie.js"></script>
+		<script src="js/view/movie.js"></script>
+		<script src="js/view/app.js"></script>
+		<script src="js/router/router.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
