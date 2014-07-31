@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<title>Training</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<!--[if lt IE 8]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		<!-- Add your site or application content here -->
+		<header></header>
+		<nav></nav>
+		<section>
+			<header>
+				<div id="localstorage">
+					<h2>LocalStorage</h2>
+					<div class="centro">
+						<textarea class= "texto" id="onlyText"></textarea>
+						<div id="result"></div>
+						<button type="button" id="save">
+							Save
+						</button>
+						<button type="button" id="clear">
+							Clear
+						</button>
+					</div>
+				</div>
+				<div id="indexdb">
+					<h2>IndexedDB</h2>
+					<div class="centro">
+						<textarea class= "texto" id="onlyTextIndex"></textarea>
+						<div id="resultIndex"></div>
+						<button type="button" id="saveIndex">
+							Save
+						</button>
+						<button type="button" id="clearIndex">
+							Clear
+						</button>
+					</div>
+				</div>
+				<div id="drop">
+					<div id="drop_zone">
+						Drop files here
+					</div>
+					<output id="list"></output>
+				</div>
+
+				<div id="websocket">
+					<h2>WebSocket</h2>
+					<textarea id="mensaje" class="texto">Mensaje a enviar</textarea>										
+
+
+
+					<button id="enviarSocket">
+						Enviar
+					</button>
+					<output id="socket"></output>
+				</div>
+
+				<div id="examplecanvas">
+					<h2>Canvas</h2>
+					<canvas id="canvas" width=150 height=150></canvas>
+				</div>
+
+				<div id="animado">
+					<h2>Animación</h2>
+
+					<canvas id="animated" width=150 height=150></canvas>
+				</div>
+
+				<div id="svg">
+					<h2>SVG</h2>
+					<object data="img/svg.svg" type="image/svg+xml">
+						SVG no soportado.
+					</object>
+				</div>
+			</header>
+			<footer></footer>
+		</section>
+		<footer></footer>
+		<script type="text/javascript" src="js/localStorage.js"></script>
+		<script type="text/javascript" src="js/indexedDB.js"></script>
+		<script type="text/javascript" src="js/dragDrop.js"></script>
+		<script type="text/javascript" src="js/webSocket.js"></script>
+		<script type="text/javascript" src="js/canvas.js"></script>
+		<script type="text/javascript" src="js/animation.js"></script>
+
+	</body>
+</html>

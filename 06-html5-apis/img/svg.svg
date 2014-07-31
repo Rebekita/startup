@@ -1,0 +1,10 @@
+<svg
+baseProfile="full"
+width="300" height="200"
+xmlns="http://www.w3.org/2000/svg">
+	<rect fill="#fff" height="600" width="750"/>
+	<rect fill="#81BEF7" height="50" width="750" y="0"/>
+	<rect fill="#81BEF7" height="50" width="750" y="150"/>
+	<circle cx="150" cy="100" r="40" fill="#FFFF00" />
+
+</svg>					

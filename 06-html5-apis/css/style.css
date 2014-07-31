@@ -1,0 +1,104 @@
+html {
+	font-size: 14px;
+	font-family: Georgia;
+	font-weight: bold;
+}
+
+body {
+	background: #333333;
+}
+
+header, nav, aside, footer {
+	background: #CCCCCC;
+	border-radius: 10px;
+}
+p {
+	border-radius: 10px;
+}
+h2 {
+}
+header, footer {
+	width: 100%;
+	text-align: center;
+}
+section, nav, aside {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 10px;
+}
+
+section {
+	width: 51%;
+	background: #CCCCCC;
+	padding: 5px;
+}
+nav, aside {
+	width: 24%;
+}
+footer {
+	position: fixed;
+	bottom: 0px;
+}
+section footer {
+	position: static;
+	bottom: auto;
+}
+#localstorage, #indexdb, #drop, #websocket, #svg {
+	margin-bottom: 150px;
+}
+#animado {
+	margin-bottom: 40px;
+	
+}
+.centro {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+.texto {
+	width: 85%;;
+	height: 65px;
+	float: left;
+}
+button {
+	float: left;
+	margin-left: 5px;
+	width: 10%;
+}
+
+#drop_zone {
+	border: 2px dashed #bbb;
+	-webkit-font-smoothing: antialiased;
+	border-radius: 5px;
+	padding: 25px;
+	text-align: center;
+	font: 18pt bold 'Georgia';
+	color: #000;
+	background: #fff;
+}
+#socket {
+	width: 100%;
+	float: left;
+	margin-top: 15px;
+}
+.enviado{
+	color: #990000;
+}
+.recibido{
+	color: #0000FF;
+}
+.abierto{
+	color:#008000;
+}
+
+#animated {
+  position: relative;
+  left: 0;
+  width: 400px;
+  height: 100px;
+  padding: 1em;
+  background: tomato;
+  color: #FFF;
+  font-size: 14px;
+  text-align: center;
+}
